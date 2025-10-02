@@ -21,7 +21,7 @@ def generate_logs(start_date, num_days, num_users=99, logs_dir="data/logs"):
         logs_dir: Directory to save log files
     """
     logs_path = Path(logs_dir)
-    logs_path.mkdir(exist_ok=True)
+    logs_path.mkdir(parents=True, exist_ok=True)
     
     apps = ['facebook', 'twitter', 'youtube', 'instagram', 'tiktok', 'linkedin']
     users = [f'user{i}' for i in range(1, num_users + 1)]
