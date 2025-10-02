@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "log_query_script_binary_search.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--from_datetime", "2025-01-01 00:00:00",
+                "--to_datetime", "2025-01-10 09:00:00",
+                "--user", "user1"
+                "--app", "facebook,twitter",
+                "--granularity", "30m",
+                "--dimensions", "app",
+                "--logs_dir", "logs",
+                "--output", "results.csv"
+            ]
+        }
+    ]
+}
