@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 import argparse
 import sys
-from logs_processor.processor import LogProcessor
+from .processor import LogProcessor
 
 
 def main():
