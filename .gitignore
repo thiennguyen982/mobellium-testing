@@ -4,3 +4,4 @@ results.csv
 __pycache__/*
 .vscode/*
 .ruff_cache/*
+log_processor/__pycache__/*

@@ -21,7 +21,7 @@ while current_date <= end_date:
     with open(log_file, "w", newline="") as f:
         writer = csv.writer(f)
         # Write header
-        writer.writerow(["timestamp", "user", "app"] + [f"metric_{i}" for i in range(1, 10)])
+        # writer.writerow(["timestamp", "user", "app"] + [f"metric_{i}" for i in range(1, 10)])
         
         for _ in range(rows_per_day):
             timestamp = current_date + timedelta(
