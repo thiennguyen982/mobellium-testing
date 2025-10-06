@@ -3,6 +3,7 @@ import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 from collections import defaultdict
+import os
 
 
 class LogProcessor:
@@ -302,6 +303,9 @@ class LogProcessor:
     ):
         log_files = self.get_log_files(from_dt, to_dt)
         has_user_dimension = "user" in dimensions
+
+        if output_file:
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
         f_out = open(output_file, "w", newline="") if output_file else None
         writer = csv.writer(f_out or sys.stdout)
